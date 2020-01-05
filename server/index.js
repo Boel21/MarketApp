@@ -1,6 +1,6 @@
 const express = require('express');
 const morgan = require('morgan');
-const mongoose = require('mongoose'); 
+const mongoose = require('mongoose');
 const session = require('express-session');
 const cors = require('cors');
 const bodyParser = require('body-parser');
@@ -25,10 +25,10 @@ app.use(cors({origin: 'http://localhost:4200'}));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}) );
 app.use(session({
-	secret:"joelagenda123",
+	secret:"joelmarket123",
 	resave:false,
 	saveUninitialized:false,
-}));	
+}));
 
 // routes
 app.use('/', indexRoutes);
